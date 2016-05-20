@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AngularJS Demos - Bootstrap</title>
+<link data-require="bootstrap-css@3.3.6" data-semver="3.3.6"
+	rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" />
+
+<link rel="stylesheet" href="resources/css/style.css" />
+
+
+<style type="text/css">
+h1 {
+	font-size: 1.7em;
+}
+
+.header div {
+	padding-left: 0 !important;
+}
+
+.imgLogo {
+	height: 2.5em;
+	margin-top: 1em;
+}
+
+.text-left-important {
+	text-align: left !important;
+}
+</style>
+
+</head>
+
+<body>
+	<div class="container-fluid">
+
+
+		<div class="row">
+			<div class='col-sm-6'>
+				<div class="form-group">
+					<div class='input-group date' id='datetimepicker1'>
+						<input type='text' class="form-control" /> <span
+							class="input-group-addon"> <span
+							class="glyphicon glyphicon-calendar"></span>
+						</span>
+					</div>
+				</div>
+			</div>
+
+
+
+
+		</div>
+
+
+	</div>
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script data-require="bootstrap.js@3.3.6" data-semver="3.3.6"
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script data-require="angular.js@1.4.9" data-semver="1.4.9"
+		src="https://code.angularjs.org/1.4.9/angular.js"></script>
+	<script data-require="angular-route@1.4.9" data-semver="1.4.9"
+		src="https://code.angularjs.org/1.4.9/angular-route.js"></script>
+	<script data-require="angular-animate@1.4.9" data-semver="1.4.9"
+		src="https://code.angularjs.org/1.4.9/angular-animate.js"></script>
+
+	<script
+		src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.3.2.js"></script>
+		
+	<script
+		src="resources/js/moment-with-locales.js"></script>
+	<script
+		src="resources/js/bootstrap-datetimepicker.js"></script>		
+
+			<script>
+				$(document).ready(function() {
+					$('#datetimepicker1').datetimepicker({
+						locale : 'es',
+						format : 'DD/MM/YYYY'
+					});
+
+				});
+			</script>
+
+
+</body>
+
+</html>

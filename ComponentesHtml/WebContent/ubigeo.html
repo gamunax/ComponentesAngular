@@ -1,0 +1,35 @@
+<div class="container">
+  <h4>Consulta de Ubigeo</h4>
+  <form class="form-horizontal" role="form">
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="level1">Departamento:</label>
+      <div class="col-sm-4">
+        <select class="form-control" id="level1" data-ng-model="$ctrl.level1" data-ng-options="loc.name for loc in $ctrl.ubigeo">
+          <option hidden selected value=''>Seleccione una opcion</option>
+        </select>
+      </div>
+      <label class="control-label col-sm-2" for="level2">Provincia:</label>
+      <div class="col-sm-4">
+        <select class="form-control" id="level2" data-ng-model="$ctrl.level2" ng-disabled="!$ctrl.level1" data-ng-options="loc.name for loc in $ctrl.level1.dep">
+          <option hidden selected value=''>Seleccione un opcion</option>
+        </select>
+      </div>
+      <label class="control-label col-sm-2" for="level3">Distrito:</label>
+      <div class="col-sm-4">
+        <select class="form-control" id="level3" data-ng-model="$ctrl.level3" ng-disabled="!$ctrl.level2" data-ng-options="loc.name for loc in $ctrl.level2.dep">
+          <option hidden selected value=''>Seleccione una opcion</option>
+        </select>
+      </div>
+
+    </div>
+
+    <div class="container">
+      <div class="col-sm-4" data-ng-if="$ctrl.level3">
+        Ubigeo es : {{::$ctrl.level3.name}} - {{::$ctrl.level3.id}}
+      </div>
+    </div>
+
+  </form>
+
+</div>

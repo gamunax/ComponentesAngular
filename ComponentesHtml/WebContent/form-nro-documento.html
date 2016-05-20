@@ -1,0 +1,58 @@
+
+                    
+<div class="container">
+  <h3>Consulta de Documentos</h3>
+  <form class="form-horizontal" role="form">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="numerodoc">Numero de documento:</label>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" id="numerodoc" 
+          data-ng-model="$ctrl.id"
+          placeholder="Ingrese nro de documento">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="tipodoc">Tipo de documento:</label>
+      <div class="col-sm-4">          
+        <select  class="form-control" id="tipodoc">
+          <option hidden selected >Seleccione un documento</option>
+          <option data-ng-repeat="tipo in $ctrl.tipoDoc" value="{{::tipo.id}}" 
+           data-ng-disabled="!tipo.enabled" >{{::tipo.desc}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-4">
+        <button data-ng-if="!$ctrl.loading" type="button" class="btn btn-default"  data-loading-text="... Loading ..."
+          data-ng-click="$ctrl.buscardoc()">Buscar <span class="glyphicon glyphicon-search"></span></button>
+        <button data-ng-if="$ctrl.loading"
+          class="btn btn-default"><i class="fa fa-circle-o-notch fa-spin"></i> Loading</button>          
+      </div>
+    </div>
+  </form>
+  
+  <div class="container" data-ng-if="$ctrl.hayResultado">
+    <h2>Resultado</h2>
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th>Numero</th>
+          <th>Nombre</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{$ctrl.resultado.id}}</td>
+          <td>{{$ctrl.resultado.nombre}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <div class="container" data-ng-if="$ctrl.nodata">
+    <h4>No hay Resultado</h4>
+  </div>
+
+</div>
+
+                

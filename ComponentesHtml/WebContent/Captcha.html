@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AngularJS Demos - Bootstrap</title>
+    <link data-require="bootstrap-css@3.3.6" data-semver="3.3.6" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" />
+    <link rel="stylesheet" href="https://rawgit.com/angular-ui-tree/angular-ui-tree/v2.15.0/dist/angular-ui-tree.css" />
+    <link rel="stylesheet" href="resources/css/style.css" />
+ 
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail" data-ng-controller="captchaCtrl as c1">
+            <no-captcha g-recaptcha-response="c1.gRecaptchaResponse" theme="light" expired-callback="c1.expiredCallback"></no-captcha>
+            <code ng-class="{ 'expired': c1.expired }" data-ng-show="c1.gRecaptchaResponse" data-ng-bind-template="{{ c1.gRecaptchaResponse | limitTo:30}} ..."></code>
+          </div>
+        </div>
+        
+
+      </div>
+
+
+    
+
+    </div>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script data-require="bootstrap.js@3.3.6" data-semver="3.3.6" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script data-require="angular.js@1.4.9" data-semver="1.4.9" src="https://code.angularjs.org/1.4.9/angular.js"></script>
+    <script data-require="angular-route@1.4.9" data-semver="1.4.9" src="https://code.angularjs.org/1.4.9/angular-route.js"></script>
+    <script data-require="angular-animate@1.4.9" data-semver="1.4.9" src="https://code.angularjs.org/1.4.9/angular-animate.js"></script>
+    <script data-require="QRCode@1.0.2" data-semver="1.0.2" src="https://rawgit.com/janantala/qrcode.js/v1.0.2/lib/qrcode.js"></script>
+    <script data-require="angular-qr@0.2.0" data-semver="0.2.0" src="https://rawgit.com/Splaktar/angular-qr/v0.2.3/src/angular-qr.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.3.2.js"></script>
+    <script data-require="angular-no-captcha@0.6.0" data-semver="0.6.0" src="https://rawgit.com/CodeDistillery/angular-no-captcha/v0.6.0/build/angular-no-captcha.min.js"></script>
+    <script data-require="angular-barcode@0.0.4" data-semver="0.0.4" src="https://rawgit.com/justechn/angular-barcode/v0.0.4/dist/angular-barcode.min.js"></script>
+    <script data-require="angular-ui-tree@2.15.0" data-semver="2.15.0" src="https://rawgit.com/angular-ui-tree/angular-ui-tree/v2.15.0/dist/angular-ui-tree.min.js"></script>
+    <script src="resources/js/services-captcha.js"></script>
+    <script src="resources/js/app-captcha.js"></script>
+  </body>
+
+</html>

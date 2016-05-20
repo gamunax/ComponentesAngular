@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="ngTableTutorial">
+<head>
+<title>TODO supply a title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link data-require="bootstrap-css@3.3.6" data-semver="3.3.6"
+	rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" />
+<link rel="stylesheet"
+	href="https://rawgit.com/esvit/ng-table/master/dist/ng-table.min.css">
+<link rel="stylesheet" href="resources/css/style.css" />
+
+
+</head>
+<body>
+	<div ng-controller="tableController">
+
+		<table ng-table="usersTable" class="table table-striped">
+			<tr ng-repeat="user in data">
+				<td data-title="'Id'">{{user.id}}</td>
+				<td data-title="'First Name'">{{user.first_name}}</td>
+				<td data-title="'Last Name'">{{user.last_name}}</td>
+				<td data-title="'e-mail'">{{user.email}}</td>
+				<td data-title="'Country'">{{user.country}}</td>
+				<td data-title="'IP'">{{user.ip_address}}</td>
+			</tr>
+		</table>
+
+	</div>
+
+	<script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<script data-require="angular.js@1.4.9" data-semver="1.4.9"
+		src="https://code.angularjs.org/1.4.9/angular.js"></script>
+	<script
+		src="https://rawgit.com/esvit/ng-table/master/dist/ng-table.min.js"></script>
+
+	<script src="resources/js/app-pagination.js"></script>
+
+
+
+</body>
+</html>
