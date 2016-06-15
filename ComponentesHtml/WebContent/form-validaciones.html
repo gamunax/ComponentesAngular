@@ -1,0 +1,23 @@
+<div class="container" data-ng-form="myform">
+  <div class="field">
+
+    <label tabindex="0" ng-show="ctrl.valor || (myform.name.$dirty)" 
+      class="show-hide">{{::ctrl.label}}</label>
+    <span data-ng-class="{cur:ctrl.tipo === 'moneda'}">
+      <input id="{{::ctrl.sid}}" name="{{::ctrl.sname}}" 
+      type="{{::ctrl.inputType}}" class="form-control" 
+      tabindex="0" draggable="false" data-validacion  data-tipo="ctrl.tipo"
+      data-ng-model="ctrl.valor" placeholder="{{::ctrl.placeholder}}" 
+      data-ng-maxlength="ctrl.maxlong" maxlength="{{::ctrl.maxlong}}" 
+      minlength="{{::ctrl.minlong}}"  /></span>
+
+  </div>
+
+  <div data-ng-messages="myform.name.$error" style="color:maroon" role="alert">
+    <div data-ng-message="stnumero">Solo numeros</div>
+    <div data-ng-message="stcaracter">Solo caracteres alfanumericos</div>
+    <div data-ng-message="sttiempo">Ingrese fecha y hora ( YYYY-MM-DD HH:MM:SS )</div>
+    <div data-ng-message="stemail">Direccion email incorrecta</div>
+    <div data-ng-message="stcc">Tarjeta de Credito Incorrecto</div>
+  </div>
+</div>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Panel de Ayuda</title>
+
+<script>
+	document.write('<base href="' + document.location + '" />');
+</script>
+<!-- Place favicon.ico in the root directory -->
+<link rel="stylesheet"
+	href="//cdnjs.cloudflare.com/ajax/libs/pure/0.5.0/pure-min.css">
+<link rel="stylesheet"
+	href="//cdnjs.cloudflare.com/ajax/libs/pure/0.5.0/grids-responsive-min.css">
+<link rel="stylesheet"
+	href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css">
+<link rel="stylesheet" href="resources/css/angular-fancy-modal.css" />
+<link rel="stylesheet"
+	href="resources/css/angular-fancy-modal-theme-classic.css" />
+<link rel="stylesheet" href="resources/css/style-panelayuda.css" />
+</head>
+
+<body>
+<body>
+	<div ng-controller="AppCtrl as app">
+
+		<div class="page">
+
+			<div class="pure-g island example">
+				<div class="pure-u-1-2 text-center center">
+
+					<div>
+						<a href ng-click="app.openDefault()">Open with default theme</a>
+					</div>
+					<div>
+						<a href ng-click="app.openThemed()">Open with custom theme</a>
+					</div>
+					<div>
+						<a href ng-click="app.avoidEscape()">Avoid closing by escape</a>
+					</div>
+					<div>
+						<a href ng-click="app.openWithAnimateCss()">Open using animate
+							css effects</a>
+					</div>
+					<div>
+						<a href ng-click="app.openWithAnimateCss2()">Open using
+							animate css effects 2</a>
+					</div>
+					<div>
+						<a href ng-click="app.openInlineController()">Inline
+							controller</a>
+					</div>
+					<div>
+						<a href ng-click="app.openControllerAsSyntax()">Controller as
+							syntax</a>
+					</div>
+					<div>
+						<a href ng-click="app.openWithLoadingMessage()">Open with
+							loading message</a>
+					</div>
+					<div>
+						<a href ng-click="app.openWithresolve()">Open with resolve
+							data</a>
+					</div>
+					<div>
+						<a href ng-click="app.openTimed()">Open and close after 2000
+							ms</a>
+					</div>
+					<div>
+						<a href ng-click="app.openAndClosePromise()">Open and close
+							using promise once opened</a>
+					</div>
+					<div>
+						<a href ng-click="app.openWithoutOverlay()">Open without
+							overlay</a>
+					</div>
+					<div>
+						<a href trigger="click" fancy-modal
+							template="<div>Hey I'm opened by a directive</div>">Open via
+							directive</a>
+					</div>
+					<div>
+						<a href trigger="click" fancy-modal overlay=false
+							template="<div>Hey I'm opened by a directive with no overlay</div>">Open
+							via directive without overlay</a>
+					</div>
+					<div>
+						<a href fancy-modal template-url="long.html">looooong content</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+
+
+	<script
+		src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.0/angular.min.js"></script>
+
+	<script src="resources/js/angular-fancy-modal.js"></script>
+	<script src="resources/js/app-panelayuda.js"></script>
+</body>
+
+</html>

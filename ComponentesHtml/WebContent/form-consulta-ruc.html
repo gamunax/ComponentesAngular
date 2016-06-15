@@ -1,0 +1,52 @@
+<div class="container">
+  <h3>Consulta de RUC</h3>
+  <div data-ng-form="stform" class="form-horizontal" role="form">
+    <div class="form-group" data-ng-class="{ 'has-error' : stform.numerodoc.$invalid && !stform.numerodoc.$pristine }">
+      <label class="control-label col-sm-2" for="numerodoc">Numero de RUC:</label>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" id="numerodoc" data-ng-keyup="ctrl.onkeyup()" 
+          data-ng-keydown="ctrl.onkeydown($event)" data-ng-blur="ctrl.onblur()" 
+          data-ng-model="ctrl.id" required maxlength="11" name="numerodoc" placeholder="RUC">
+        <p data-ng-show="stform.numerodoc.$invalid && !stform.numerodoc.$pristine" 
+        class="help-block">Numero de RUC incorrecto.</p>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-4">
+        <button data-ng-disabled="ctrl.isInValid" data-ng-if="!ctrl.loading" type="button" class="btn btn-default" data-ng-click="ctrl.buscardoc()">Buscar <span class="glyphicon glyphicon-search"></span></button>
+        <button data-ng-if="ctrl.loading" class="btn btn-default"><i class="fa fa-circle-o-notch fa-spin"></i> Loading</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" data-ng-if="ctrl.hayResultado">
+    <h3>Resultado</h3>
+    <table class="table table-condensed">
+      <tr>
+        <th>Nro de Doc.</th>
+        <td>{{ctrl.resultado.ruc}}</td>
+      </tr>
+      <tr>
+        <th>Nombre Completo</th>
+        <td>{{ctrl.resultado.nombre}}</td>
+      </tr>
+      <tr>
+        <th>Tipo de Contribuyente</th>
+        <td>{{ctrl.resultado.tipo}}</td>
+      </tr>
+            <tr>
+        <th>Estado</th>
+        <td>{{ctrl.resultado.estado}}</td>
+      </tr>
+      <tr>
+        <th>Direccion</th>
+        <td>{{ctrl.resultado.direccion}}</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="container" data-ng-if="ctrl.nodata">
+    <h4>No existe Informaci&oacute;</h4>
+  </div>
+
+</div>

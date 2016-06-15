@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Validaciones</title>
+  <link data-require="bootstrap-css@3.3.6" data-semver="3.3.6" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" />
+  <script>
+    document.write('<base href="' + document.location + '" />');
+  </script>
+  <link rel="stylesheet" href="resources/css/style-validaciones.css" />
+</head>
+
+<body>
+  <form>
+    <input-data data-sid="id1" data-sname="name1" data-label="Numero" data-valor="" tipo="numero" data-placeholder="Numero"></input-data>
+
+    <input-data data-label="Caracter" data-valor="" tipo="caracter" data-placeholder="Caracter"></input-data>
+
+    <input-data data-label="Moneda" data-valor="" tipo="moneda" data-placeholder="Moneda"></input-data>
+
+    <input-data data-label="Fecha y Hora" data-valor="" tipo="tiempo" data-placeholder="Fecha y Hora"></input-data>
+
+    <input-data data-label="email" data-valor="" tipo="email" data-placeholder="email"></input-data>
+
+    <input-data data-id="id6" data-name="name6" data-label="Credit Card" data-valor="" tipo="cc" 
+      data-placeholder="Credit Card" data-max-longitud="16" data-min-longitud="12" ></input-data>
+  </form>
+  <script data-require="jquery@2.2.0" data-semver="2.2.0" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script data-require="bootstrap.js@3.3.6" data-semver="3.3.6" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script data-require="angularjs@1.5.5" data-semver="1.5.5" src="https://code.angularjs.org/1.5.5/angular.js"></script>
+  <script data-require="angular-animate@1.5.5" data-semver="1.5.5" src="https://code.angularjs.org/1.5.5/angular-animate.js"></script>
+  <script data-require="angular-messages@1.5.5" data-semver="1.5.5" src="https://code.angularjs.org/1.5.5/angular-messages.js"></script>
+  <script src="resources/js/app-validaciones.js"></script>
+</body>
+
+</html>
