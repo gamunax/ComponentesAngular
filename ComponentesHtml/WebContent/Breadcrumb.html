@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en" ng-app="ncy-sample">
+  <head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" type="text/css" href="resources/js/asset/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/sample.css">
+
+    <script src="resources/js/asset/underscore.js"></script>
+
+    <script src="resources/js/asset/angular.js"></script>
+    <script src="resources/js/asset/angular-ui-router.js"></script>
+    <script src="resources/js/asset/ui-bootstrap-tpls.js"></script>
+    <script src="resources/js/asset/angular-breadcrumb.js"></script>
+
+    <title ncy-breadcrumb-text="Sample app : {{ncyBreadcrumbChain}}"></title>
+
+  </head>
+  <body>
+
+ 
+
+    <div class="container">
+        <div class="row">
+           
+
+            <div class="well" ncy-breadcrumb>
+
+            </div>
+            <div ui-view>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="resources/js/app-breadcrumb.js"></script>
+
+    <script src="resources/js/controllers/room_list.js"></script>
+    <script src="resources/js/controllers/room_detail.js"></script>
+    <script src="resources/js/controllers/booking_list.js"></script>
+    <script src="resources/js/controllers/booking_day.js"></script>
+    <script src="resources/js/controllers/booking_detail.js"></script>
+
+  </body>
+</html>
